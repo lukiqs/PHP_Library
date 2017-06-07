@@ -24,6 +24,9 @@ class FileINI {
         }        
     }
     
+    /**
+     * The method save data in configuration file
+     */
     public function save(){
         $file = "";
         foreach($this->content as $key => $val){
@@ -37,10 +40,19 @@ class FileINI {
         write_file($this->fileName, $file, 'w');
     }
     
+    /**
+     * The method load configuration file
+     */
     private function load(){
             $this->content = parse_ini_file($this->fileName,true);
     }
     
+    /**
+     * The method get value
+     * @param string $key - name of key
+     * @param string $section - name of section (optional)
+     * @return string - value
+     */
     public function get($key,$section = null){
         if($section != null)
             return $this->content[$section][$key];
@@ -48,6 +60,12 @@ class FileINI {
             return $this->content[$this->defSection][$key];
     }
     
+    /**
+     * The method set configuration
+     * @param string $key - name of key
+     * @param string $value - value
+     * @param string $section - name of section (optional)
+     */
     public function set($key, $value,$section = null){
         if($section != null)
             $this->content[$section][$key] = $value;
