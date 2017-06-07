@@ -1,6 +1,7 @@
 <?php
 /**
  * Class RemoveOldLogs is responsible for remove old logs.
+ * @author lukiqs
  */
 final class RemoveOldLogs{
     private $mainDir = [];
