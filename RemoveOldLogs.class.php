@@ -1,6 +1,6 @@
 <?php
 /**
- * Class RemoveOldLogs is responsible for remove old logs.
+ * Class RemoveOldLogs is responsible for remove old logs. Lic free, open sourse
  * @author lukiqs
  */
 final class RemoveOldLogs{
