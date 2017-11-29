@@ -1,11 +1,11 @@
-<?php
+﻿<?php
 include_once 'klasy/pop3.php';
 include_once 'klasy/mime_parser.php';
 include_once 'klasy/rfc822_addresses.php';
 @stream_wrapper_register('pop3', 'pop3_stream');
 
 /**
- * Class SyncAirBNB to synchronization with AirBnB
+ * Class SyncAirBNB to synchronization with AirBnB by email
  * Class need file:
  * - pop3.php
  * - mime_parser.php
