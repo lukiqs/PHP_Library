@@ -37,7 +37,7 @@ class FileINI {
             }
         }
         
-        write_file($this->fileName, $file, 'w');
+        file_put_contents($this->fileName, $file);
     }
     
     /**
